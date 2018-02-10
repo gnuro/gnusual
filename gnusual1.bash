@@ -1,6 +1,6 @@
 #Create Gui Buttons and assign vals for var
 val=$(yad --center --width=300 --height=100 --title "GNUsual" --image "/mnt/c/cspire.png" --text="Choose a Multicast to view:" \
---button="starkville":1 \
+--button="Starkville":1 \
 --button="Jackson":2 \
 --button="Hattiesburg":3 \
 --button="FLORA":4 ) \
