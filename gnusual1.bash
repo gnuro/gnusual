@@ -10,19 +10,6 @@ ret=$?
 if [[ $ret -eq 1 ]]; then
 vlc rtp://MulticastIP
 #Insert troubleshooting gui-utility commands here
-HOSTS="8.8.8.8"
-
-COUNT=4
-
-for myHost in $HOSTS
-do
-  count=$(ping -c $COUNT $myHost | grep 'received' | awk -F',' '{ print $2 }' | awk '{ print $1 }')
-  if [ $count -eq 0 ]; then
-    # 100% failed 
-    echo "Host : $myHost is down (ping failed) at $(date)"
-  fi
-done
-
 fi
 
 if [[ $ret -eq 2 ]]; then
